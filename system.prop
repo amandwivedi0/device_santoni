@@ -14,4 +14,7 @@ persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 
+# Start in global mode
+persist.sys.fflag.override.settings_network_and_internet_v2=true
+
 persist.sys.disable_rescue=true
