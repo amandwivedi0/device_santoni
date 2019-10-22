@@ -29,4 +29,7 @@ ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 # Time
 persist.timed.enable=true
 
+# Start in global mode
+persist.sys.fflag.override.settings_network_and_internet_v2=true
+
 persist.sys.disable_rescue=true
