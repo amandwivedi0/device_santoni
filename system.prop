@@ -28,3 +28,5 @@ ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 
 # Time
 persist.timed.enable=true
+
+persist.sys.disable_rescue=true
