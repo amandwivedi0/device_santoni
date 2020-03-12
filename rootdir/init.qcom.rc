@@ -894,3 +894,7 @@ service goodix_script /vendor/bin/init.goodix.sh
 	
 on property:apexd.status=ready
     mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
+
+on property:init.svc.qcom-post-boot=stopped
+    # Reduce swappiness
+    write /proc/sys/vm/swappiness 0
