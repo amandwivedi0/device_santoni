@@ -43,6 +43,9 @@ char const *heapsize;
 char const *heapminfree;
 char const *heapmaxfree;
 
+namespace android {
+namespace init {
+
 using android::init::property_set;
 
 void check_device()
@@ -97,4 +100,6 @@ void vendor_load_properties()
     property_set("dalvik.vm.heapminfree", heapminfree);
     property_set("dalvik.vm.heapmaxfree", heapmaxfree);
 
+}
+}
 }
