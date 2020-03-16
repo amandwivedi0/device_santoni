@@ -225,8 +225,12 @@ PRODUCT_PACKAGES += \
 
 # FM
 PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni
+    FM2 \
+    qcom.fmradio \
+    libqcomfm_jni
+
+PRODUCT_BOOT_JARS += \
+       qcom.fmradio
 
 # fwk-detect
 PRODUCT_PACKAGES += \
