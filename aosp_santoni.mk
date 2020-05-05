@@ -17,24 +17,17 @@
 $(call inherit-product, device/xiaomi/santoni/full_santoni.mk)
 
 # Inherit some common Coltos stuff.
-$(call inherit-product, vendor/colt/config/common.mk)
+$(call inherit-product, vendor/aosp/config/common.mk)
 
 PRODUCT_DEVICE := santoni
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 4
-PRODUCT_NAME := colt_santoni
+PRODUCT_NAME := aosp_santoni
 BOARD_VENDOR := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 
-# Build Type
-COLT_BUILD_TYPE := Official
-
-# Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.colt.maintainer=Aman_dwivedi
-
 # Boot animation
-TARGET_BOOT_ANIMATION_RES := 720x1280
+TARGET_BOOT_ANIMATION_RES := 720
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
@@ -43,3 +36,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := "Xiaomi/santoni/santoni:7.1.2/N2G47H/V9.5.10.0.NAMMIFD:user/release-keys"
+
+# GApps
+TARGET_GAPPS_ARCH := arm64
+WITH_GAPPS := true
+IS_PHONE := true
