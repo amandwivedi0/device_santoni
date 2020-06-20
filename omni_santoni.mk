@@ -32,6 +32,9 @@ TARGET_BOOTANIMATION_SIZE := 720p
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
+# Additional packages
+PRODUCT_EXCLUDE_EXTRA_PACKAGES := true
+
 PRODUCT_DEVICE := santoni
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 4
