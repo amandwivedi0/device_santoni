@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 The Havoc-OS Project
+# Copyright (C) 2019 The omnirom Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,25 +16,28 @@
 
 $(call inherit-product, device/xiaomi/santoni/full_santoni.mk)
 
-# Inherit some common Coltos stuff.
-$(call inherit-product, vendor/colt/config/common.mk)
+# Sample: This is where we'd set a backup provider if we had one
+# $(call inherit-product, device/sample/products/backup_overlay.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+
+# Get the prebuilt list of APNs
+$(call inherit-product, vendor/omni/config/gsm.mk)
+
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+# must be before including omni part
+TARGET_BOOTANIMATION_SIZE := 720p
+
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
 
 PRODUCT_DEVICE := santoni
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 4
-PRODUCT_NAME := colt_santoni
+PRODUCT_NAME := omni_santoni
 BOARD_VENDOR := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-
-# Build Type
-COLT_BUILD_TYPE := Official
-
-# Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.colt.maintainer=Aman_dwivedi
-
-# Boot animation
-TARGET_BOOT_ANIMATION_RES := 720x1280
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
