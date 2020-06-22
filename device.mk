@@ -30,7 +30,7 @@ PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/msm8996/media
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/omni/overlay/CarrierConfig
 
-PRODUCT_ENFORCE_RRO_TARGETS := \
+#PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
 
 # Screen density
@@ -433,9 +433,6 @@ PRODUCT_PACKAGES += \
 	libqti_vndfwk_detect
 
 #PRODUCT_BOOT_JARS += \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
     telephony-ext
 
 # Seccomp policy
