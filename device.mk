@@ -514,10 +514,6 @@ PRODUCT_PACKAGES += \
     PixelLiveWallpaperPrebuilt
 endif
 
-# Wi-Fi Display
-PRODUCT_BOOT_JARS += \
-   WfdCommon
-
 PRODUCT_PACKAGES += \
     libaacwrapper \
     libnl
