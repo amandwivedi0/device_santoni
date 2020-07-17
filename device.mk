@@ -379,7 +379,8 @@ PRODUCT_COPY_FILES += \
 
 # Prebuilt Apps
 PRODUCT_PACKAGES += \
-      BeatPlayer
+      BeatPlayer \
+      QPGallery
 
 # Privapp Whitelist
 PRODUCT_COPY_FILES += \
